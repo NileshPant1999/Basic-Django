@@ -23,9 +23,9 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-hn)p=&+6c_@(v15ufj#4m9w-w5rppb)*s36&4m!(m+_b)+c15)'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = [os.environ['ALLOWED_HOSTS']]
 
 
 # Application definition
@@ -67,7 +67,7 @@ TEMPLATES = [
     },
 ]
 
-WSGI_APPLICATION = 'my_project.wsgi.application'
+WSGI_APPLICATION = 'my_project.my_project.wsgi.application'
 
 
 # Database
